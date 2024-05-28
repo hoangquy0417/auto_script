@@ -8,22 +8,22 @@ BOT = telegram.Bot(token=os.getenv("BOT_TOKEN"))
 CHAT_ID = os.getenv("CHAT_ID")
 
 
-async def send_message(text, chat_id):
+async def send_message(text, chat_id=CHAT_ID):
     async with BOT:
         await BOT.send_message(text=text, chat_id=chat_id)
 
 
-async def send_document(document, chat_id):
+async def send_document(document, chat_id=CHAT_ID):
     async with BOT:
         await BOT.send_document(document=document, chat_id=chat_id)
 
 
-async def send_photo(photo, chat_id):
+async def send_photo(photo, chat_id=CHAT_ID):
     async with BOT:
         await BOT.send_photo(photo=photo, chat_id=chat_id)
 
 
-async def send_video(video, chat_id):
+async def send_video(video, chat_id=CHAT_ID):
     async with BOT:
         await BOT.send_video(video=video, chat_id=chat_id)
 
